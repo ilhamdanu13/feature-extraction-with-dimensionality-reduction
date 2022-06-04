@@ -53,3 +53,8 @@ I'm trying to inverse the image that has been reduced/compressed. Will the image
 
 The image on the left is the original face before it was reduced. the image on the right is a face that has been reduced to 250 features/components then returned to the original image. It turns out that the resulting image after inverting is not as perfect as it was in the beginning. Because some information is missing.
 
+# PCA reconstruction is a linear combination of its components.
+So, each component is combined with each component has a weight. But why doesn't the image return perfectly when inverted? because some information is missing.
+
+### Encode face to Face Verification
+It turns out that what is done when the linear combination equals the encoding . George W. Bush's image can be represented with only 250 features (code), and it is similar to TFIDF or BoW in NLP ie as an encoder. This means that we can actually do face verification or face recognition.
