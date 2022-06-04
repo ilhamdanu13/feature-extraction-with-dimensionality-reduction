@@ -1,4 +1,4 @@
-# feature-extraction-with-dimensionality-reduction
+# Feature Extraction with Dimensionality Reduction
 # Import Package
 import common packages
 - import **numpy as np**
@@ -23,9 +23,13 @@ test_size = 0.2 (which means 80% for train, and 20% for test). And stratified so
 
 # Visualize Data
 Sample data.
+
 ![image](https://user-images.githubusercontent.com/86812576/171996592-23892dbc-36ee-490e-92f7-e0974c7154a9.png)
 
 # Decide n_components using Cumulative Explained Variance
+
+![image](https://user-images.githubusercontent.com/86812576/171998053-ee1055c9-e655-4957-bf68-9b5885bbde8a.png)
+
 I will try feature extraction from image. the principle is the same after the image is flattened, it will be decomposed, which was originally 3023 x 5656 into just a few features and got its principle component (PCA).
 
 # Feature Extraction with Dimensionality Reduction
@@ -39,3 +43,13 @@ What are the features of the PCA components? I will try to visualized the PCA co
 Plot of the first ten components. 
 
 ![image](https://user-images.githubusercontent.com/86812576/171997276-be1c16c4-acd5-4d95-a546-ce9e41c6642f.png)
+
+Let's see, it turns out that every component produced by PCA has meaning.
+
+# Reconstruct Image
+I'm trying to inverse the image that has been reduced/compressed. Will the image return to the way it was? Logically there will be missing information.
+
+![image](https://user-images.githubusercontent.com/86812576/171998336-99f0a02f-5920-44c4-ab9b-b126b8de8060.png)
+
+The image on the left is the original face before it was reduced. the image on the right is a face that has been reduced to 250 features/components then returned to the original image. It turns out that the resulting image after inverting is not as perfect as it was in the beginning. Because some information is missing.
+
