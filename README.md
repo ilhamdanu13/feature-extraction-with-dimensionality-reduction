@@ -1,4 +1,4 @@
-# Feature Extraction with Dimensionality Reduction
+# Feature Extraction on Image with Dimensionality Reduction
 # Import Package
 import common packages
 - import **numpy as np**
