@@ -58,3 +58,14 @@ So, each component is combined with each component has a weight. But why doesn't
 
 ### Encode face to Face Verification
 It turns out that what is done when the linear combination equals the encoding . George W. Bush's image can be represented with only 250 features (code), and it is similar to TFIDF or BoW in NLP ie as an encoder. This means that we can actually do face verification or face recognition.
+
+### How is it work?
+Each face image that has been carried out by PCA will generate a code/weight, because there are so many images it looks like a bank containing codes/weights. Suppose there are pictures of new faces outside the dataset. The new face images will also be coded/weighted which will be used for the previous 250 PCA component features. So what is done for face recognition is just to match the weight of the new face image to the old face image. 
+
+### Find the most similar face to Mr. Soekarno
+The thing to do is flatten the image, then transform it to a PCA model. Then the new image will turn into 250 encoding features which are then saved to the bank of code.
+
+![image](https://user-images.githubusercontent.com/86812576/172007801-a899a39d-33d7-4276-84cc-eac4ced22519.png) ![Screenshot 2022-06-04 213912](https://user-images.githubusercontent.com/86812576/172007816-99704a7e-6e66-4017-a3cb-4dd9687bff2e.png)
+
+It turned out that the result was Mr. Soekarno is similar to Tony Blair's face, this is because there are similarities in code/weight.
+Maybe because the pose of his face is both facing to the right. That's what our image search found.
